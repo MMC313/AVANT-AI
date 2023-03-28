@@ -1,0 +1,366 @@
+@keyframes horizontalScroll {
+    0% { transform: translateX(0)}
+	100% { transform:translateX(-156vw)}
+}
+
+@keyframes verticalScroll {
+    0% { transform: translateY(0)}
+	100% { transform:translateY(-60vw)}
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F3F4;
+    z-index: 2;
+    box-shadow: 0px 1px 5px black;
+    position: relative;
+    padding-top: 5vw;
+    padding-bottom: 1vw;
+    margin-top: 1vw;
+    border-radius: 1vw;
+    width: 98vw;
+}
+
+
+
+.header_title{
+    font-size: 5vw;
+    color: black;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5%;  
+    margin-bottom: 3vw;
+}
+
+.logo{
+    width: 10vw;
+    height: auto;
+    
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+    border-bottom: 1px solid #F2F3F4;
+    box-shadow: 5px 5px 10px rgba(154,160,185,.05), 5px 5px 10px rgba(166,173,201,.2),
+                1px 1px 10px rgba(154,160,185,.05), 1px 1px 10px rgba(166,173,201,.2);
+    border-radius: 5px;
+    margin-bottom: 1vh;
+}
+
+.input_container:hover, .input_container:active{
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,.2)
+}
+
+.input{
+    width: 80vw;
+    height: 14vw;
+    font-size: 4vw;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    z-index: 2;
+    padding: 2vw;
+    font-family: sans-serif;
+    resize: none;
+    
+    
+}
+
+.input_btn{
+    appearance: none;
+    color: rgb(119 119 119);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-top: 1px solid grey;
+    font-size: 4vw;
+    width: 95%;
+
+}
+
+.input_btn:hover{
+    color: black;
+}
+
+.github{
+    width: 10vw;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #F2F3F4;
+    overflow: hidden;
+}
+
+.examples{
+    background-color: transparent;
+    display: flex;
+   
+    width: 100vw;
+    overflow: hidden;
+    gap: 1vw;
+
+}
+
+.examples:hover{
+    animation-play-state: paused;
+}
+
+.examples_container{
+    animation: horizontalScroll 10s linear 1s infinite;
+
+}
+
+.example_images{
+    width: 25vw;
+}
+
+.example_images:active{
+    /* z-index: -2; */
+}
+
+.caption{   
+    z-index: -1;
+    position: absolute;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    backdrop-filter: blur(1px) brightness(60%);
+    color: #F2F3F4;
+}
+
+
+.search_images{
+    width: 83vw;
+    background-color: #F2F3F4;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3vw;
+    margin-bottom: 2vw;
+
+}
+
+.loading_image{
+    width: 100%;
+
+}
+
+.images{
+    width: 40vw;
+}
+
+.history{
+    width: 20%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    overflow: auto;
+    visibility: hidden;
+    height: 0;
+}
+
+.history_title{
+    color: rgb(119 119 119);
+    font-size: 1.5rem;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5%;
+    height: 0;
+}
+
+.history_images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+
+}
+
+.history_images_set{
+    display: flex;
+    width:90%;
+    justify-content: space-between;
+    margin-bottom: 9%;
+}
+
+.history_image{
+    width: 20%;
+}
+
+
+@media (min-width: 500px){
+
+
+    .header_title{
+       font-size: 2.5vw;
+    }
+
+    .logo{
+        width: 5vw;
+    }
+    
+    .input{
+        width: 75vw;
+        height: 6vw;
+        font-size: 2.5vw;
+    }
+
+    .input_btn{
+        font-size: 3vw;
+    }
+
+    .github{
+        width: 7vw;
+    }
+
+    .history{
+        height: 0;
+    }
+}
+
+@media (min-width: 700px){
+
+    body{
+        height: 100vh;
+    }
+
+    .header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100vw;
+        border-radius: 0;
+        margin-top: 0;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        height: 8vh;
+        
+    }
+
+    .header_title{
+        font-size: 1.75vw;
+        margin-left: 1vw;
+        margin-bottom: 0;
+    }
+    
+    .logo{
+        width: 3vw;
+    }
+
+    .input_container{
+        flex-direction: row;
+        margin-left: 6vw;
+        margin-right: 18vw;
+    }
+
+    .input{
+        width: 50vw;
+        font-size: 1vw;
+        height: 1.25vw;
+        padding: 1vw;
+       
+        
+    }
+
+    .input_btn{
+        font-size: 1.25vw;
+        border-top: none;
+        border-left: 1px solid grey;
+        width: 7vw;
+    }
+
+    .github{
+        width: 5vw;
+    }
+
+
+    .content{
+        flex-direction: row-reverse;
+        align-items: start;
+        justify-content: space-around;
+    
+    }
+
+    .examples{
+        width: 15vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        height: 90vh;
+        overflow: hidden;
+
+    }
+
+    .examples_container{
+        animation: verticalScroll 10s linear 1s infinite; 
+
+    }
+
+    .example_images{
+        width: 10vw;
+        vertical-align: top;
+    }
+ 
+    .search_images{
+        width: 70vw;
+        box-shadow: 5px 0 10px rgba(154,160,185,.05), 15px 0 40px rgba(166,173,201,.2),
+                -5px 0 10px rgba(154,160,185,.05), -15px 0 40px rgba(166,173,201,.2);
+        gap: 0;
+        flex-wrap: nowrap;
+        flex-direction: column ;
+        height: 90vh;
+        align-items: center;
+        overflow-y: auto;
+        padding-top: 1vw;
+        background-color: rgb(241, 241, 241);
+    }
+
+    .images{
+        width: 35vw;
+        margin-bottom: 1vw;
+    }
+
+    .loading_image{
+        width: 60vw;
+    }
+
+    .history{
+        height: 90vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .history_title{
+        height: 3vw;
+        border-bottom: 1px solid rgb(119 119 119);
+    }
+
+}
