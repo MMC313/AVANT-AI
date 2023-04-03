@@ -11,7 +11,7 @@ Using OpenAI's DALLE API and a combination Express and Node, created a webapp th
 
 ## Deployment
 
--https://avant-ai.up.railway.app
+https://avant-ai.up.railway.app
 
 
 ## Built With
